@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <title>Homework 5 question 8 to question 10</title>
+    <div>Question 8</div>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            flex: 1 1 auto;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        li:hover {
+            opacity: 0.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li data-color ="red">Item 1</li>
+        <li data-color ="blue"> Item 2</li>
+        <li data-color ="green"> Item 3</li>
+    </ul>
+
+    <script>
+        document.querySelectorAll("li").forEach(item => {
+            item.addEventListener("click", () => {
+                item.style.color = item.getAttribute("data-color");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
